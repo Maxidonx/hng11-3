@@ -3,13 +3,12 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from os import getenv
 
 def send_mail(email):
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.login(getenv('EMAIL_USERNAME'), getenv('EMAIL_PASSWORD'))
+    server.login("johnmaxwell927@gmail.com", "dpsqbatytpoxlbqf")
 
-    sender_email = getenv('EMAIL_USERNAME')
+    sender_email = "johnmaxwell927@gmail.com"
     receiver_email = email
 
     message = MIMEMultipart("alternative")
